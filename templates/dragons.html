@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Dragon Index</h1>
+
+<p>SQL: <em>{{ query }}</em></p>
+<p>Size: {{ size }} rows</em></p>
+
+<table style="width: 100%">
+    <thead>
+        <th>Nome</th>
+        <th>Cor</th>
+        <th>Peso</th>
+        <th>Local</th>
+        <th>Riders</th>
+    </thead>
+    <tbody>
+    {% for dragon in dragons %}
+        <tr>
+            <td>{{ dragon.name }}</td>
+            <td style="background-color: {{ dragon.color }}"></td>
+            <td>{{ dragon.weight }}</td>
+            <td>{{ dragon.location }}</td>
+            <td>{{ dragon.riders.all | join:", " }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
