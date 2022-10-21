@@ -11,6 +11,7 @@ class Dragon(models.Model):
     name = models.CharField(max_length=100, verbose_name="nome")
     color = models.CharField(choices=Color.choices, max_length=10, verbose_name="cor")
     weight = models.DecimalField(max_digits=5, decimal_places=3, verbose_name="peso", help_text="tons")
+    power = models.IntegerField(verbose_name="poder")
     location = models.ForeignKey('Location', on_delete=models.PROTECT, verbose_name="local")
     riders = models.ManyToManyField('Rider', verbose_name="montadores")
 
@@ -35,6 +36,7 @@ class Location(models.Model):
 
 class Rider(models.Model):
     name = models.CharField(max_length=100, verbose_name="nome")
+    power = models.IntegerField(verbose_name="poder")
 
     class Meta:
         verbose_name = "montador"

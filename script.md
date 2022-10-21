@@ -33,4 +33,12 @@
 
 ## Trilha 3 - Serializer
 
-- 
+- Explicar sobre a funcionalidade de batalha
+- Adicionar power field em Dragon e Rider
+- Criar action
+- Interromper e criar serializers: DragonBattleSerializer e BattlePairSerializer
+- Continuar action
+- Interromper e criar método battle()
+- Concluir action
+- Testar
+- Encerramento
