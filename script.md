@@ -15,6 +15,7 @@
 - Apresentar a DragonIndexView
 - Criar 10 dragões e testar
 - Criar 1000 dragões e testar
+- Instalar Django Debug Toolbar
 
 ### Count
 - Mudar len() para count()
