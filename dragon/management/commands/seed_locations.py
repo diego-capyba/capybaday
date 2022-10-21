@@ -16,4 +16,4 @@ class Command(BaseCommand):
         Location.objects.create(name="Dragonstone")
         Location.objects.create(name="King's Landing")
 
-        print("Location instances created")
+        self.stdout.write("Location instances created")

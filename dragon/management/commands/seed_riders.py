@@ -12,12 +12,9 @@ class Command(BaseCommand):
         # Reset data...
         Rider.objects.all().delete()
 
-        # Create instances
-        Rider.objects.create(name="Aegon")
-        Rider.objects.create(name="Viserys I")
-        Rider.objects.create(name="Rhaenyra")
-        Rider.objects.create(name="Daemon")
-        Rider.objects.create(name="Jon Snow")
-        Rider.objects.create(name="Daenerys")
+        riders = baker.make_recipe(
+            'dragon.rider',
+            _quantity=6
+        )
 
-        print("Rider instances created")
+        self.stdout.write("Rider instances created")
