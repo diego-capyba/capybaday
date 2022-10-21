@@ -18,15 +18,11 @@ from django.urls import include, path
 
 from rest_framework.routers import DefaultRouter
 
-from dragon.views import DragonIndexView, DragonViewSet
+from dragon.views import DragonIndexView
 
-router = DefaultRouter()
-router.register(r'dragons', DragonViewSet, basename='dragon')
 
 urlpatterns = [
-    path('__debug__/', include('debug_toolbar.urls')),
+    # path('__debug__/', include('debug_toolbar.urls')),
     path('admin/', admin.site.urls),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('dragons/', DragonIndexView.as_view(), name='dragon-index'),
-    path('api/', include(router.urls)),
 ]

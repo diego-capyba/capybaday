@@ -29,7 +29,6 @@ dragon_names = [
 dragon = Recipe(
     Dragon,
     name=cycle(dragon_names),
-    power=lambda: randint(1, 100)
 )
 
 location_names = [
@@ -54,5 +53,4 @@ rider_names = [
 rider = Recipe(
     Rider,
     name=cycle(rider_names),
-    power=lambda: randint(1, 100)
 )

@@ -11,8 +11,6 @@
         <th>Nome</th>
         <th>Cor</th>
         <th>Peso</th>
-        <th>Local</th>
-        <th>Riders</th>
     </thead>
     <tbody>
     {% for dragon in dragons %}
@@ -20,8 +18,6 @@
             <td>{{ dragon.name }}</td>
             <td style="background-color: {{ dragon.color }}"></td>
             <td>{{ dragon.weight }}</td>
-            <td>{{ dragon.location }}</td>
-            <td>{{ dragon.riders.all | join:", " }}</td>
         </tr>
     {% endfor %}
     </tbody>
