@@ -1,5 +1,13 @@
 # Script
 
+## Preparação
+
+- Resetar o banco
+- Executar migrações
+- Rodar seed de Locations e Riders
+- Criar super usuário
+- Rodar o servidor
+
 ## Trilha 1 - Querysets
 
 - Apresentar o model
@@ -27,9 +35,21 @@
 
 ## Trilha 2 - Model Serializers
 
-- Model serializers básicos
-- Inserindo nested serializers no serializer de leitura
-- Alterando para to_representation
+### ModelSerializers básicos
+
+- Criar a DragonViewSet
+- Criar o Router e a URL
+- Adicionar URL da browsable API
+- Testar lista, detalhe e edição
+
+### Mudança de serializer na view
+- Criar DragonReadSerializer
+- Alterar na view
+- Testar edição
+
+### Serializer híbrido
+- Sobrescrever to_representation()
+- Testar
 
 ## Trilha 3 - Serializer
 
